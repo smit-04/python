@@ -1,0 +1,12 @@
+name = input("Enter name: ")
+phone = input("Enter phone: ")
+email = input("Enter email: ")
+
+v = open("contact.vcf", "w")
+v.write("BEGIN:VCARD\n")
+v.write("VERSION:3.0\n")
+v.write(f"N:{name}\n")
+v.write(f"TEL:{phone}\n")
+v.write(f"EMAIL:{email}\n")
+v.write("END:VCARD\n")
+v.close()
